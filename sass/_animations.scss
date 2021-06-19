@@ -1,0 +1,28 @@
+//loading spinner page d'accueil
+@keyframes loader-bg {
+	0% {
+	  visibility: visible;
+	}
+  }
+
+@keyframes loader-spinner {
+	35% {
+		transform: rotateX(360deg);
+	}
+	100% {
+		transform: rotatex(360deg);
+		opacity: 0;
+		z-index: -10;
+	}
+}
+
+//apparition texte
+@keyframes gradual-card-appear {
+	from {
+	  transform: translateY(40%);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }

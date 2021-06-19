@@ -1,0 +1,69 @@
+// Fichier layout.scss
+//architecture du site en sections principales
+.loading-spinner {
+	visibility: hidden;
+	position: fixed;
+	z-index: 500;
+	width: 100%;
+	height: 100%;
+	background: $background-color;
+	cursor: wait;
+	animation: loader-bg 2.5s ease-in-out 0s none;
+	.loader__animation {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		.loader__animation__spinner {
+			font-family: $title-font;
+			font-size: 40px;
+			margin: 10px;
+			background: -webkit-gradient(linear, left top, left bottom, from($primary-color), to($secondary-color));
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			-webkit-text-stroke: 0;
+			animation: loader-spinner 2.5s ease-in-out 0s none;
+}
+	}
+}
+
+body {
+	font-family: $text-font;
+	scroll-behavior: smooth;
+ 	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: $text-font;
+	scroll-behavior: smooth;
+}
+
+.header {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: $white;
+}
+
+.main {	
+	&__index {
+		margin: auto;
+		padding: 2rem 1rem;
+		background-color: $header-background-color;
+	}
+	&__menu {
+		background-color: $header-background-color;
+		padding-bottom: 2rem;
+	}
+}
+
+footer {
+    background-color:$footer-color;
+	padding: 26px 19px 20px 24px;
+	color: $white;
+}
+

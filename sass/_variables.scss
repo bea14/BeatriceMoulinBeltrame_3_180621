@@ -1,0 +1,53 @@
+// Fichier variables.scss
+
+//Font Variables
+$title-font: "Shrikhand", "cursive";
+$text-font: "Roboto", sans-serif;
+
+//color variables
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$dark-color: #353535;
+$icon-color: #7e7e7e;
+$footer-color: #353535;
+$white: #ffffff;
+$shadow-color: #848484;
+$button-shadow-color: #a3a3a3;
+$button-shadow-hover-color: #3d3d3d;
+$background-color: $white;
+$header-background-color: #f6f6f6;
+$search-background-color: #eaeaea;
+
+// cards
+$card-bg: $white;
+$card-border-width: 0.5em;
+$card-border-color: #F2F2F2;
+$card-border-radius: 2em;
+$card-spacer-y: 1em;
+$card-spacer-x: 1em;
+
+//breakpoints
+$breakpoints: (
+    tablet: 768px,
+    desktop: 1024px,
+    large-desktop: 1440px,
+);
+//$breakpoints: (phone: 320px, bp-small-3: 39.8em, tablet: 768px, bp-large: 50em, desktop: 1024px);
+$bp-small: 24em;
+$bp-small-2: 29.75em;
+$bp-small-3: 39.8em;
+$bp-med: 46.8em;
+$bp-med-2: 48em;
+$bp-large: 50em;
+$bp-large2: 54.5em;
+$bp-xl: 60em;
+$bp-xl-2: 67em;
+
+$xs: ( max:  767px );
+$sm: ( min:  768px );
+$md: ( min:  992px );
+$lg: ( min: 1200px );
+$sm-only: ( min: map-get($sm, min), max: map-get($md, min) - 1 );
+$md-only: ( min: map-get($md, min), max: map-get($lg, min) - 1 );
+
