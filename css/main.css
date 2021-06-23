@@ -328,6 +328,8 @@ button .button__command {
 }
 .howto .howto__title {
   margin-top: 0;
+  padding-bottom: 0.5em;
+  font-weight: bold;
 }
 .howto .steps {
   margin: 0;
@@ -346,12 +348,6 @@ button .button__command {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  /*&:hover {
-               box-shadow: .25rem .25rem 10px $button-shadow-hover-color;
-               background-color: $primary-color;
-               filter: brightness(140%);
-               -webkit-filter: brightness(140%);
-  }**/
 }
 .howto .steps .step:first-child {
   margin-top: 0;
@@ -378,6 +374,13 @@ button .button__command {
   color: #ffffff;
   position: absolute;
   left: -0.75rem;
+}
+.howto .steps .step:hover {
+  -webkit-box-shadow: 0.25rem 0.25rem 10px #3d3d3d;
+          box-shadow: 0.25rem 0.25rem 10px #3d3d3d;
+  background-color: #9356DC;
+  filter: brightness(140%);
+  -webkit-filter: brightness(140%);
 }
 .howto .steps .step .howto__icon {
   margin-right: 1rem;
