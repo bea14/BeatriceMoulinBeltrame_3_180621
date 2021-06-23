@@ -132,6 +132,8 @@ button {
     font-weight: bold;
 	.howto__title {
 		margin-top: 0;
+		padding-bottom: 0.5em;
+		font-weight: bold;
 	}
 	.steps {
 		margin: 0;
@@ -166,12 +168,12 @@ button {
 				position: absolute;
 				left: -.75rem;
 			}
-            /*&:hover {
+            &:hover {
                 box-shadow: .25rem .25rem 10px $button-shadow-hover-color;
                 background-color: $primary-color;
                 filter: brightness(140%);
                 -webkit-filter: brightness(140%);
-			}**/
+			}
 			.howto__icon {
 				margin-right: 1rem;
 				color: $icon-color;
