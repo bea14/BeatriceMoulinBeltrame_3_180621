@@ -1,0 +1,149 @@
+//pages menu
+
+.header-menu-back {
+	position: absolute;
+	top: 1.25rem;
+	left: 1.6rem;
+	color: $dark-color;
+	font-size: 2rem;
+}
+
+.menu-header{
+	width: 100vw;
+	img {
+		max-width: 1660px;
+		max-height: 32rem;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.menu-main {
+	background-color: $header-background-color;
+	border-top-left-radius: 1.6em;
+	border-top-right-radius: 1.6em;
+	padding: 1rem 0.5rem;
+	transform: translateY(-4rem);
+	margin-bottom: -4rem;
+	&-title { 
+		display: $flex;
+		justify-content: $justify-between;
+		align-items: $align-center;
+		padding: 1rem 2rem 1.5rem 1rem;
+		h1 {
+			font-weight: $weight-bold;
+			font-family: $title-font;
+			font-size: 1.7rem;
+		}
+	}
+	&-subtitle {
+		text-transform: $text-uppercase;
+		margin-bottom: 1em;
+	}
+}
+
+.deco-title {
+	border-bottom: solid 0.2em $tertiary-color;
+	margin-bottom: 1rem;
+}
+
+.button-command {
+    padding: 1.25rem 3.12rem;    
+}
+
+.menu-card-content {
+	display: $flex;
+	flex-direction: $flex-row;
+	min-width: 13.5rem;
+	padding: 1em;
+	background: $white;
+	box-shadow: 0 0.62em 0.62em $shadow-color;
+	border-radius: $radius-medium;
+	&:hover {
+		box-shadow: 0 0.3em 1em $shadow-color;
+		.menu-card-check {
+			margin-right: -1.25rem;
+		}
+		.icon-animation {
+			transform: rotate(1turn);
+		}
+	}
+	.icon-animation {
+		font-size: 2em;
+		color: $white;
+		transform: rotate(0);
+		transition: transform 0.5s ease-in-out 0s;
+	}
+}
+
+.menu-card {
+	max-width: 100%;
+	flex: 0 1 99%;
+	&-title {
+		overflow: hidden;
+		>* {
+			white-space: nowrap; /*Les blancs sont regroupés mais les passages à la ligne automatiques sont supprimés*/
+			overflow: hidden;
+			text-overflow: ellipsis;/*définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé, ellipsis = '...' */
+			/*white-space et overflow sont obligatoires pour text-overflow*/
+		}
+		h3 {
+			margin-bottom: 0.3em;
+			font-weight: $weight-medium;
+		}
+		p {
+			font-weight: $weight-lighter;
+			font-size: 0.9em;
+		}
+	}
+	&-price {
+		font-weight: $weight-bold;
+		margin-left: auto;
+		align-self: $align-end;
+	}
+	&-check {
+		display: $flex;
+		align-items: $align-center;
+		justify-content: $justify-center;
+		width: 6.25rem;
+		margin: -1.25rem -7.5rem -1.25rem 1.25rem;		
+		background: $tertiary-color;
+		transition: margin-right 0.5s ease-in-out 0s;	
+	}
+	@include bp(desktop) {
+		flex: 0 1 calc(32% - 1em);
+	}
+}
+
+.text-animation {
+	opacity: 0;
+	transition: box-shadow 0.5s ease-in-out 0s;
+	animation: gradual-card-appear 1s ease-in-out 0s forwards;
+}
+ 
+.text-animation:nth-child(2) {
+	animation-delay: 0.2s;
+}
+
+.text-animation:nth-child(3) {
+	animation-delay: 0.5s;
+}
+
+.text-animation:nth-child(4) {
+	animation-delay: 1s;
+}
+
+.text-animation:nth-child(5) {
+	animation-delay: 1.5s;
+}
+
+.text-animation:nth-child(6) {
+	animation-delay: 2s;
+}
+
+
+.block-button {
+	display: $flex;
+	justify-content: $justify-center;
+	padding: 3rem 0;
+}

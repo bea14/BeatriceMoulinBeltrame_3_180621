@@ -1,69 +1,78 @@
 // Fichier layout.scss
 //architecture du site en sections principales
+
+/*
+* Spinner page d'accueil
+* 1) apparition d'un background blanc sur toute la page pdt 3s
+* 2) apparition du texte qui se remplit avec un gradient de couleurs et effectue 2 rotations pdt 3s
+*/
 .loading-spinner {
 	visibility: hidden;
 	position: fixed;
 	z-index: 500;
 	width: 100%;
 	height: 100%;
+    left: 0;
+    top: 0;
 	background: $background-color;
 	cursor: wait;
-	animation: loader-bg 2.5s ease-in-out 0s none;
-	.loader__animation {
+	animation: loader-bg 3s ease-in-out 0s none;
+	.loading-spinner-bg {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		.loader__animation__spinner {
+		.loading-spinner-animation {
 			font-family: $title-font;
-			font-size: 40px;
-			margin: 10px;
+			font-size: 3rem;
 			background: -webkit-gradient(linear, left top, left bottom, from($primary-color), to($secondary-color));
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 			-webkit-text-stroke: 0;
-			animation: loader-spinner 2.5s ease-in-out 0s none;
-}
+			animation: loader-spinner 3s ease-in-out 0s none;
+		}
 	}
-}
-
-body {
-	font-family: $text-font;
-	scroll-behavior: smooth;
- 	display: flex;
-	flex-direction: column;
-	height: 100%;
-	margin: 0;
-	padding: 0;
 }
 
 html {
 	font-family: $text-font;
-	scroll-behavior: smooth;
+}
+
+body {
+	font-family: $text-font;
+	font-size: $font-size-base;
+ 	display: $flex;
+	flex-direction: $flex-col;
+	height: 100%;
+	@include bp(large-desktop) {
+		width: 1660px;
+		margin: auto;
+	}
 }
 
 .header {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
+	display: $flex;
+	flex-direction: $flex-col;
+	position: relative;
 	background-color: $white;
 }
 
 .main {	
-	&__index {
-		margin: auto;
-		padding: 2rem 1rem;
+	&-index {
 		background-color: $header-background-color;
+		margin: auto;
+		width: 100%;
 	}
-	&__menu {
+	&-menu {
 		background-color: $header-background-color;
 		padding-bottom: 2rem;
 	}
 }
 
 footer {
-    background-color:$footer-color;
-	padding: 26px 19px 20px 24px;
+	margin: 0;
+    background-color:$dark-color;
+	padding: 1.5rem 1.25rem 1.25rem 1.5rem;
 	color: $white;
 }
 

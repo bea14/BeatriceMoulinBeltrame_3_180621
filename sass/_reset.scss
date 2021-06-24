@@ -1,13 +1,66 @@
 //reset.scss
+
+/* 1. border-box pour tous les elements
+* 2. Interdit min-width: auto and min-height: auto sur les enfants flex et grid
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* 1 */
+  min-width: 0; /* 2 */
+  min-height: 0; /* 2 */
+}
+*, *::before, *::after {
+ box-sizing: inherit;
+}
+
+/*
+ * 1. Enlève le surlignement gris sur les liens pour iOS 
+ * 2. Empêcher les changements d'orientation de police dans iOS 
+ * 3. Casse les mots pour éviter les débordements dans tous les navigateurs
+ */
+
+ html {
+  font-size: $font-size-html;
+  -webkit-tap-highlight-color: transparent; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  overflow-wrap: break-word; /* 3 */
+}
+
+
 html, body, p, ol, ul, li, figure, textarea, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
+	scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/*
+ * Titres
+ */
+
+ h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
   font-weight: normal;
 }
+
+/*
+ * Liens
+ */
+
+a {
+  text-decoration: $link-decoration;
+}
+
+a:focus,
+a:hover,
+a:active {
+  text-decoration: $link-decoration-hover;
+}
+
+/*
+* Autres
+*/
 
 ul {
   list-style: none;
@@ -17,16 +70,18 @@ button, input {
   margin: 0;
 }
 
-html {
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
 img {
   height: auto;
   max-width: 100%;
+}
+
+/*
+* contrôle de l'algorithme d'amplification du texte sur certains appareils mobiles
+* 100%: Active l'algorithme d'amplification du navigateur
+*/
+@media (max-device-width: $tablet) and (orientation: $landscape) {
+  html {
+   -webkit-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+  }
 }

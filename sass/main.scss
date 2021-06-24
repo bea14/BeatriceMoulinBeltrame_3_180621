@@ -2,9 +2,10 @@
 
 @import "https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Shrikhand&display=swap";
-@import '_reset';
 @import '_variables';
+@import '_reset';
 @import '_layout';
-@import "_animations";
 @import '_components';
-//@import "_pages";
+@import '_pageindex';
+@import '_pagesmenu';
+@import '_animations';

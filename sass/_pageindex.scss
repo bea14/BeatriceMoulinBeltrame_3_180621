@@ -1,0 +1,116 @@
+//page index
+
+.header-searchbar {
+	display: $flex;
+    justify-content: $justify-center;
+	height: 4em;
+    margin-top: 0.1em;
+    background-color: $search-background-color;
+    width: 100%;
+	.header-searchbar-icon {
+        color: $dark-color;
+        font-size: 1.2em;
+        line-height: 3;
+        text-align: $text-center;
+	}
+	.header-searchbar-txt {
+        padding: 0 0 0 0.2em;
+        width: 10em;
+        color: $dark-color;
+        font-size: 1em;
+        font-weight: $weight-medium;
+        background-color: $background-color-transparent;
+        outline: none;
+        border: none;
+    }
+}
+
+.explore {
+    font-family: $text-font;
+	padding: 2rem;
+	display: $flex;
+	flex-direction: $flex-col;
+    background-color: $header-background-color;
+    text-align: $text-center;
+        &-title { 
+            margin: 0;
+            font-weight: $weight-bold;
+        }
+        &-subtitle { 
+            font-weight: $weight-light;
+            margin: 1.5rem 0;
+        }	
+}
+
+
+.howto {
+	padding: 2rem 2rem;
+	background-color: $background-color;
+    font-weight: $weight-bold;
+	position: relative;
+	.howto-title {
+		margin-top: 0;
+		padding-bottom: 1em;
+		font-weight: $weight-bold;
+	}
+	.howto-steps {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		counter-reset: compteListe; /*reinitialise le compteur à 1,2,3,...*/
+		&-li {
+			padding: 1.5rem;
+			margin: 1rem 0 1rem .75rem;
+			box-shadow: .25rem .25rem .5rem $button-shadow-color;
+			border-radius: $radius-medium;
+			background-color: $header-background-color;
+			display: $flex;
+			position: relative;
+			&:first-child {
+				margin-top: 0;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&::before {
+				counter-increment: compteListe;/*incremente de 1 en 1*/
+				content: counter(compteListe) " ";
+				background: $primary-color;
+				height: 1.5rem;
+				width: 1.5rem;
+				border-radius: $radius-xlarge;
+				display: $flex;
+				justify-content: $justify-center;
+				align-items: $align-center;
+				color: $white;
+				position: absolute;
+				left: -.75rem;
+			}
+            &:hover {
+                box-shadow: .25rem .25rem 0.62rem $button-shadow-hover-color;
+                background-color: $primary-color;
+                filter: brightness(140%);
+                -webkit-filter: brightness(140%);
+			}
+			.howto-icon {
+				margin-right: 1rem;
+				color: $icon-color;
+			}			
+			@include bp(desktop) {
+				flex:1;
+				margin:0 0 0 2rem;
+			}
+		}
+		@include bp(desktop) {
+			display:flex;
+		}
+	}	
+}
+
+.card-main {
+	
+	flex: 0 1 calc(99% - 1em);
+	@include bp(desktop) {
+		flex: 0 1 calc(50% - 1em);
+	}
+}
