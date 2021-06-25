@@ -26,15 +26,14 @@ p {
 }
 
 .header-logo {
-    display: $flex;
+    display: flex;
     padding: 0.6rem;
-    align-items: $align-center;
-    justify-content: $justify-center;
+    align-items: center;
+    justify-content: center;
 	position: relative;
-    box-shadow: 0 0.2em 0.25em -0.05em $shadow-color;
 	.logo {
 		font-family:$title-font;
-		text-align: $text-center;
+		text-align: center;
 	}
 }
 
@@ -63,16 +62,16 @@ button {
 }
 
 .cards {
-    display: $flex;
-    justify-content: $justify-around;
+    display: flex;
+    justify-content: space-around;
     flex: 0 1 99%;
-    flex-direction: $flex-col;
+    flex-direction: column;
 	margin: 1rem;
     cursor: pointer;
 	.card {
-		display: $flex;
-		flex-direction: $flex-col;
-		justify-content: $justify-around;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
 		border-radius: $card-border-radius;
 		box-shadow: 0.2em 0.2em $shadow-color;
 		margin-bottom: $card-spacer-x;
@@ -97,9 +96,9 @@ button {
 			
 		}		
 		.card-content {
-			display: $flex;
-            justify-content: $justify-between;
-            align-items: $align-center;
+			display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin: $card-spacer-y $card-spacer-x $card-spacer-y $card-spacer-x;
 			.card-title-maintitle {
 				font-weight: $weight-bold;
@@ -110,8 +109,8 @@ button {
 			}
 	}
 	@include bp(desktop) {
-		flex-direction: $flex-row;
-		flex-wrap: $flex-wrap;
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
 }	
 .card-badge {	
@@ -119,7 +118,7 @@ button {
 	position: absolute;
 	right: 1.5rem;
 	top: 1rem;
-	text-align: $text-center;
+	text-align: center;
 	background-color: $card-bg-badge;
 		color: $card-color-badge;
 	.active {
