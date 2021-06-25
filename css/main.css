@@ -214,8 +214,6 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  -webkit-box-shadow: 0 0.2em 0.25em -0.05em #848484;
-          box-shadow: 0 0.2em 0.25em -0.05em #848484;
 }
 .header-logo .logo {
   font-family: "Shrikhand", "cursive";
@@ -531,10 +529,16 @@ button:hover {
 
 .header-menu-back {
   position: absolute;
-  top: 1.25rem;
+  top: 0.6rem;
   left: 1.6rem;
   color: #353535;
   font-size: 2rem;
+}
+@media screen and (min-width: 1440px) {
+  .header-menu-back {
+    position: relative;
+    top: -3rem;
+  }
 }
 
 .menu-header {
@@ -567,7 +571,7 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem 2rem 1.5rem 1rem;
+  padding: 0.5rem 1rem 1.5rem 0rem;
 }
 .menu-main-title h1 {
   font-weight: 700;
