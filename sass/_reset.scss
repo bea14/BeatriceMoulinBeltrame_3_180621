@@ -75,13 +75,4 @@ img {
   max-width: 100%;
 }
 
-/*
-* contrôle de l'algorithme d'amplification du texte sur certains appareils mobiles
-* 100%: Active l'algorithme d'amplification du navigateur
-*/
-@media (max-device-width: $tablet) and (orientation: $landscape) {
-  html {
-   -webkit-text-size-adjust: 100%;
-   -ms-text-size-adjust: 100%;
-  }
-}
+
