@@ -379,7 +379,7 @@ button:hover {
   color: #ffffff;
 }
 
-.header-lacalisation {
+.header-localisation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -391,13 +391,13 @@ button:hover {
   background-color: #eaeaea;
   width: 100%;
 }
-.header-lacalisation .header-lacalisation-icon {
+.header-localisation .header-localisation-icon {
   color: #353535;
   font-size: 1.2em;
   line-height: 3;
   text-align: center;
 }
-.header-lacalisation .header-lacalisation-txt {
+.header-localisation .header-localisation-txt {
   padding: 0 0 0 0.2em;
   width: 10em;
   color: #353535;
