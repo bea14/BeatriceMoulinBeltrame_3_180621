@@ -1,19 +1,19 @@
 //page index
 
-.header-searchbar {
+.header-lacalisation {
 	display: flex;
     justify-content: center;
 	height: 4em;
     margin-top: 0.1em;
     background-color: $search-background-color;
     width: 100%;
-	.header-searchbar-icon {
+	.header-lacalisation-icon {
         color: $dark-color;
         font-size: 1.2em;
         line-height: 3;
         text-align: center;
 	}
-	.header-searchbar-txt {
+	.header-lacalisation-txt {
         padding: 0 0 0 0.2em;
         width: 10em;
         color: $dark-color;
