@@ -103,7 +103,7 @@
 	&-price {
 		font-weight: $weight-bold;
 		margin-left: auto;
-		align-self: end;
+		align-self: flex-end;
 	}
 	&-check {
 		display: flex;

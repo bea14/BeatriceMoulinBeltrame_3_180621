@@ -73,12 +73,13 @@ button {
 		flex-direction: column;
 		justify-content: space-around;
 		border-radius: $card-border-radius;
-		box-shadow: 0.2em 0.2em $shadow-color;
+		box-shadow: 0.2em 0.2em 0.6em $shadow-color;
 		margin-bottom: $card-spacer-x;
 		overflow: hidden;
 		position: relative;
 		&-main {
 			background-color: $card-bg;
+			box-shadow: 0.2em 0.2em 0.6em $shadow-color-hover;
 		}
 		a {
             text-decoration: $link-decoration-none;
@@ -129,14 +130,14 @@ button {
 .heart {
 	font-size: 2em;
 	cursor: pointer;
-	&:hover {	
-	opacity: 1;
-	background: linear-gradient(to left,$primary-color, $secondary-color);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-webkit-text-stroke: 0 transparent;
-	font-weight: $weight-bold;
-  	}
+	&:hover {
+		background: linear-gradient(to left,$primary-color, $secondary-color);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-webkit-text-stroke: 0 transparent;
+		font-weight: $weight-bold;
+		animation: fill 1s ease-in-out;
+	}
 }
 
 .footer-logo { 

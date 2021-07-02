@@ -88,9 +88,7 @@
 			}
             &:hover {
                 box-shadow: .25rem .25rem 0.62rem $button-shadow-hover-color;
-                background-color: $primary-color;
-                filter: brightness(140%);
-                -webkit-filter: brightness(140%);
+                background-color: $button-hover-color;
 			}
 			.howto-icon {
 				margin-right: 1rem;
