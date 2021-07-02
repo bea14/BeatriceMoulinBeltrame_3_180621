@@ -213,8 +213,8 @@ p {
 button {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-box-shadow: 0.25rem 0.25rem 0.62em #a3a3a3;
-          box-shadow: 0.25rem 0.25rem 0.62em #a3a3a3;
+  -webkit-box-shadow: 0.25rem 0.25rem 0.62em rgba(163, 163, 163, 0.2);
+          box-shadow: 0.25rem 0.25rem 0.62em rgba(163, 163, 163, 0.2);
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 6rem;
@@ -228,8 +228,8 @@ button {
   cursor: pointer;
 }
 button:hover {
-  -webkit-box-shadow: 0.25rem 0.25rem 0.62em #3d3d3d;
-          box-shadow: 0.25rem 0.25rem 0.62em #3d3d3d;
+  -webkit-box-shadow: 0.25rem 0.25rem 0.62em rgba(163, 163, 163, 0.6);
+          box-shadow: 0.25rem 0.25rem 0.62em rgba(163, 163, 163, 0.6);
   filter: brightness(120%);
   -webkit-filter: brightness(120%);
 }
@@ -266,14 +266,16 @@ button:hover {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   border-radius: 1em;
-  -webkit-box-shadow: 0.2em 0.2em #848484;
-          box-shadow: 0.2em 0.2em #848484;
+  -webkit-box-shadow: 0.2em 0.2em 0.6em rgba(0, 0, 0, 0.25);
+          box-shadow: 0.2em 0.2em 0.6em rgba(0, 0, 0, 0.25);
   margin-bottom: 1em;
   overflow: hidden;
   position: relative;
 }
 .cards .card-main {
   background-color: #ffffff;
+  -webkit-box-shadow: 0.2em 0.2em 0.6em rgba(0, 0, 0, 0.5);
+          box-shadow: 0.2em 0.2em 0.6em rgba(0, 0, 0, 0.5);
 }
 .cards .card a {
   text-decoration: none;
@@ -336,13 +338,14 @@ button:hover {
   cursor: pointer;
 }
 .heart:hover {
-  opacity: 1;
   background: -webkit-gradient(linear, right top, left top, from(#9356DC), to(#FF79DA));
   background: linear-gradient(to left, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0 transparent;
   font-weight: 700;
+  -webkit-animation: fill 1s ease-in-out;
+          animation: fill 1s ease-in-out;
 }
 
 .footer-logo {
@@ -441,8 +444,8 @@ button:hover {
 .howto .howto-steps-li {
   padding: 1.5rem;
   margin: 1rem 0 1rem 0.75rem;
-  -webkit-box-shadow: 0.25rem 0.25rem 0.5rem #a3a3a3;
-          box-shadow: 0.25rem 0.25rem 0.5rem #a3a3a3;
+  -webkit-box-shadow: 0.25rem 0.25rem 0.5rem rgba(163, 163, 163, 0.2);
+          box-shadow: 0.25rem 0.25rem 0.5rem rgba(163, 163, 163, 0.2);
   border-radius: 1rem;
   background-color: #f6f6f6;
   display: -webkit-box;
@@ -478,11 +481,9 @@ button:hover {
   left: -0.75rem;
 }
 .howto .howto-steps-li:hover {
-  -webkit-box-shadow: 0.25rem 0.25rem 0.62rem #3d3d3d;
-          box-shadow: 0.25rem 0.25rem 0.62rem #3d3d3d;
-  background-color: #9356DC;
-  filter: brightness(140%);
-  -webkit-filter: brightness(140%);
+  -webkit-box-shadow: 0.25rem 0.25rem 0.62rem rgba(163, 163, 163, 0.6);
+          box-shadow: 0.25rem 0.25rem 0.62rem rgba(163, 163, 163, 0.6);
+  background-color: #f2eafb;
 }
 .howto .howto-steps-li .howto-icon {
   margin-right: 1rem;
@@ -593,13 +594,13 @@ button:hover {
   min-width: 13.5rem;
   padding: 1em;
   background: #ffffff;
-  -webkit-box-shadow: 0 0.62em 0.62em #848484;
-          box-shadow: 0 0.62em 0.62em #848484;
+  -webkit-box-shadow: 0 0.62em 0.62em rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.62em 0.62em rgba(0, 0, 0, 0.25);
   border-radius: 1rem;
 }
 .menu-card-content:hover {
-  -webkit-box-shadow: 0 0.3em 1em #848484;
-          box-shadow: 0 0.3em 1em #848484;
+  -webkit-box-shadow: 0 0.3em 1em rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.3em 1em rgba(0, 0, 0, 0.25);
 }
 .menu-card-content:hover .menu-card-check {
   margin-right: -1.25rem;
@@ -648,7 +649,7 @@ button:hover {
   font-weight: 700;
   margin-left: auto;
   -ms-flex-item-align: end;
-      align-self: end;
+      align-self: flex-end;
 }
 .menu-card-check {
   display: -webkit-box;
@@ -774,5 +775,27 @@ button:hover {
     opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+@-webkit-keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
   }
 }
